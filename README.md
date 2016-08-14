@@ -21,7 +21,7 @@ See `example/` for more detailed usage (in typescript). Here's also a [live demo
 
 By passing a `Promise` object to `show()` method, `Visualizer` will inject the component whichi indicates "a promise is running", and set the `span`'s opacity to `1`.
 
-After promise is resolved/rejected, the component is replaced by the noew one which represents new state.
+After promise is resolved/rejected, the component is replaced by the new one which represents new state, and container's opacity is setted to 0 after a short period.
 
 `show()` will return a new promise object.
 
@@ -31,11 +31,11 @@ After promise is resolved/rejected, the component is replaced by the noew one wh
 
 - `className`: The css class of the container. The container will be a `span`.
 - `provider`: See next section.
-- `duration`: After the promise is resolved/rejected, the visualizer will keep show for a short period. It is controlled by this property.
+- `duration`: After the promise is resolved/rejected, the visualizer will keep showing for a short period. It is controlled by this property.
 
 # Provider
 
-A provider returns react components representing state of promise. The default implementation uses svg images and css animation. You can easily write your own in seconds: it's nothing but an object with three function: `done()`, `failed()` nd `running()`, each represents a dirrerent state.
+A provider returns react components representing state of promise. The default implementation uses svg images and css animation. You can easily write your own in seconds: it's nothing but an object with three function: `done()`, `failed()` nd `running()`, each represents a different state.
 
 ```js
 var myProvider = {
