@@ -1,0 +1,12 @@
+.state {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+}
