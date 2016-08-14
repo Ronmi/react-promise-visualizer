@@ -1,6 +1,6 @@
 var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var webpack = require("webpack");
-const pkg = require("./package.json");
+const pkg = require("../package.json");
 module.exports = {
   entry: {
     bundle: "./src/main.tsx",

@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "typings install",
     "typings": "typings",
-    "build": "rm -fr dist ; tsc -d --outDir dist && rm -fr dist/test",
+    "build": "rm -fr dist ; tsc -d --outDir dist && rm -fr dist/test dist/example",
     "start": "tsc && webpack && concurrently \"npm run webpack:w\" \"npm run server\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
