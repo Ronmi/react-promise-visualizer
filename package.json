@@ -4,6 +4,9 @@
   "description": "react component showing visual notification for asynchronized works",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "keywords": [
+    "react", "promise", "ui", "visual-notification"
+  ],
   "scripts": {
     "postinstall": "typings install",
     "typings": "typings",
