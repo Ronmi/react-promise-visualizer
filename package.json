@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "react component showing visual notification for asynchronized works",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "postinstall": "typings install",
     "typings": "typings",
