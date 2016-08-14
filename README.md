@@ -13,7 +13,7 @@ sendAJAX() {
 }
 ```
 
-See `example/` for more detailed usage (in typescript). Here's also a [live demo](https://ronmi.github.io/react-promise-visualizer/).
+See `example/` for more detailed usage (in typescript). There's also a [live demo](https://ronmi.github.io/react-promise-visualizer/).
 
 # How it works
 
@@ -49,8 +49,13 @@ var myProvider = {
 render() {
   return <Visualizer provider={myProvider} ref={c => this.v = c} />;
 }
-
 ```
+
+### Default provider
+
+Since default provider is implemented using svg images, you **MUST** specify the width and height of the container(`span`). Specifying `className` is strongly recommended.
+
+You can open live demo above, remove width/height using browser's developer tool, and see what happends.
 
 # License
 
