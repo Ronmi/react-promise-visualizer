@@ -23,15 +23,17 @@ By passing a `Promise` object to `show()` method, `Visualizer` will inject the c
 
 After promise is resolved/rejected, the component is replaced by the new one which represents new state, and container's opacity is setted to 0 after a short period.
 
-`show()` will return a new promise object.
+`show()` will wrap you promise in a new promise object and returns it. The new one logically equals to old one, it does not represents the life cycle or event of visualizer.
+
+It should be safe to call `show()` multiple times: old one will keep running, your `.then()` will be executed correctly, and only newest one can change the state of visualizer. This is done by allocating a numeric identifier for each promise object internally.
 
 # Available properties
 
 `Visualizer` accepts three properties:
 
-- `className`: The css class of the container. The container will be a `span`.
-- `provider`: See next section.
-- `duration`: After the promise is resolved/rejected, the visualizer will keep showing for a short period. It is controlled by this property.
+- `className`: The css class of the container. The container will be a `span`. *optional*
+- `provider`: See next section. *required*
+- `duration`: How many milliseconds should visualizer keep showing after resolved/rejected. *optional, defaults to 3000*
 
 # Provider
 
