@@ -45,10 +45,10 @@ module.exports = {
 	query: { presets: ['es2015'], },
       },
       {
-	test: /\.css/,
-	loader: "style-loader!css-loader",
+	test: /\.css(\?.*)?$/,
+	loader: "style-loader!css-loader?modules&importLoaders=1",
       },
-      { test: /\.(ttf|woff|eot|svg)/, loader: "url-loader" },
+      { test: /\.svg(\?.*)?$/, loader: "url-loader?mimetype=image/svg+xml&name=[hash].svg" },
     ],
 
     preLoaders: [
