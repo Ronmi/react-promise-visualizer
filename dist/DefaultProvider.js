@@ -1,4 +1,3 @@
-/// <reference path="../typings/globals/require/index.d.ts" />
 "use strict";
 const React = require("react");
 const ok = require("../assets/ok.svg");
